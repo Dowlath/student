@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F73A4CC19B6E34500EAC428 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F73A4CB19B6E34500EAC428 /* TableViewCell.m */; };
+		2F8094A619B5985D007E8B85 /* tableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F8094A519B5985D007E8B85 /* tableViewController.m */; };
 		AC2B6D1F19AF37E00076FC3F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2B6D1E19AF37E00076FC3F /* Foundation.framework */; };
 		AC2B6D2119AF37E00076FC3F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2B6D2019AF37E00076FC3F /* CoreGraphics.framework */; };
 		AC2B6D2319AF37E00076FC3F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC2B6D2219AF37E00076FC3F /* UIKit.framework */; };
@@ -35,6 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F73A4CA19B6E34500EAC428 /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		2F73A4CB19B6E34500EAC428 /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		2F8094A419B5985D007E8B85 /* tableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tableViewController.h; sourceTree = "<group>"; };
+		2F8094A519B5985D007E8B85 /* tableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = tableViewController.m; sourceTree = "<group>"; };
 		AC2B6D1B19AF37E00076FC3F /* student.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = student.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC2B6D1E19AF37E00076FC3F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AC2B6D2019AF37E00076FC3F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -122,6 +128,10 @@
 				AC2B6D3719AF37E00076FC3F /* ViewController.m */,
 				AC2B6D5619AF394C0076FC3F /* details.h */,
 				AC2B6D5719AF394C0076FC3F /* details.m */,
+				2F8094A419B5985D007E8B85 /* tableViewController.h */,
+				2F8094A519B5985D007E8B85 /* tableViewController.m */,
+				2F73A4CA19B6E34500EAC428 /* TableViewCell.h */,
+				2F73A4CB19B6E34500EAC428 /* TableViewCell.m */,
 				AC2B6D3919AF37E00076FC3F /* Images.xcassets */,
 				AC2B6D2519AF37E00076FC3F /* Supporting Files */,
 			);
@@ -254,6 +264,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F8094A619B5985D007E8B85 /* tableViewController.m in Sources */,
+				2F73A4CC19B6E34500EAC428 /* TableViewCell.m in Sources */,
 				AC2B6D3819AF37E00076FC3F /* ViewController.m in Sources */,
 				AC2B6D2F19AF37E00076FC3F /* AppDelegate.m in Sources */,
 				AC2B6D5819AF394C0076FC3F /* details.m in Sources */,
@@ -464,6 +476,7 @@
 				AC2B6D5219AF37E10076FC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC2B6D5319AF37E10076FC3F /* Build configuration list for PBXNativeTarget "studentTests" */ = {
 			isa = XCConfigurationList;
@@ -472,6 +485,7 @@
 				AC2B6D5519AF37E10076FC3F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

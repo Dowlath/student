@@ -8,13 +8,15 @@
 
 #import "ViewController.h"
 #import "details.h"
+#import "tableViewController.h"
 
 @interface ViewController ()
 {
+    
     NSMutableArray *newobj;
     details *obj;
-   // NSMutableArray *marks;
-}
+    tableViewController *wc ;
+   }
 @end
 
 @implementation ViewController
@@ -22,6 +24,14 @@
 
 - (void)viewDidLoad
 {
+    name.delegate=self;
+    mark1.delegate=self;
+    mark2.delegate=self;
+    mark3.delegate=self;
+    mark4.delegate=self;
+    mark5.delegate=self;
+  
+    
     newobj=[[NSMutableArray alloc]init];
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
@@ -39,7 +49,9 @@
     obj.name=name.text;
     obj.total=total.text;
     obj.average=average.text;
-    [obj.marks addObject:mark1.text];
+//    [obj.marks addObject:name.text];
+//    [obj.marks addObject:average.text];
+//    [obj.marks addObject:total.text];
     [obj.marks addObject:mark1.text];
 
     [obj.marks addObject:mark2.text];
@@ -51,6 +63,8 @@
     [obj.marks addObject:mark5.text];
 
     [newobj addObject:obj];
+    NSLog(@"Array descr---> %d",[newobj count]);
+
 }
 
 - (IBAction)calc:(id)sender {
@@ -69,15 +83,34 @@
 }
 
 - (IBAction)view:(id)sender {
-    NSMutableString *string=[NSMutableString string];
+//    NSMutableString *string=[NSMutableString string];
+//    
+//    details *get=[newobj objectAtIndex:0];
+//    [string appendString:[NSString stringWithFormat:@"%@\n",get.name]];
+//[string appendString:[NSString stringWithFormat:@"%@\n",get.total]];
+//    [string appendString:[NSString stringWithFormat:@"%@\n",get.average]];
+//    _display.text=string;
+//    NSMutableArray *get1=[get marks];
+//    for (int i=0; i<[get1 count]; i++) {
+//        [string appendString:[NSString stringWithFormat:@"%@\n",[get1 objectAtIndex:i ]]];
+//        NSLog(@"%@",[get1 objectAtIndex:i ]);
+//        _display.text=string;
+   // }
     
-    details *get=[newobj objectAtIndex:0];
-    [string appendString:[NSString stringWithFormat:@"%@\n",get.name]];
-[string appendString:[NSString stringWithFormat:@"%@\n",get.total]];
-    [string appendString:[NSString stringWithFormat:@"%@\n",get.average]];
-    _display.text=string;
-    NSMutableArray *get1=[get marks];
-NSString *get2=[get1 objectAtIndex:2];
-    NSLog(@"%@",get2);
+    
+    
+    wc = [[tableViewController alloc]init];
+    
+    wc = [[UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil] instantiateViewControllerWithIdentifier:@"tableViewController"];
+    [wc setArrayobj:newobj];
+        [self.navigationController pushViewController:wc animated:YES];
+    
+
+      }
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
 }
 @end

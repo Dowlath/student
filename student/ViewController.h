@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 @property (strong, nonatomic) IBOutlet UITextField *name;
 @property (strong, nonatomic) IBOutlet UITextField *mark1;
 @property (strong, nonatomic) IBOutlet UITextField *mark2;
@@ -21,4 +21,5 @@
 @property (strong, nonatomic) IBOutlet UILabel *total;
 @property (strong, nonatomic) IBOutlet UILabel *average;
 @property (strong, nonatomic) IBOutlet UITextView *display;
+@property (strong,nonatomic)  NSMutableArray *newobj;
 @end
